@@ -1,0 +1,53 @@
+\section{Schwellenwert und Kosten}
+\label{sec:schwelle}
+
+Bei einem Ausfallanteil von 26,1~\% ist die Schwelle
+0,5 willkuerlich. Sie wird hier aus dem erwarteten Nutzen abgeleitet:
+
+\begin{table}[H]
+  \centering
+  \small
+  \begin{tabular}{lrrrrrr}
+    \toprule
+    Schwelle & Precision & Recall & F1 & TP & FP & FN \\
+    \midrule
+    0,5 (Standard) & 0,526 & 0,781 & 0,629 & 143 & 129 & 40 \\
+    1:1 & 0,650 & 0,628 & 0,639 & 115 & 62 & 68 \\
+    5:1 & 0,495 & 0,880 & 0,634 & 161 & 164 & 22 \\
+    10:1 & 0,394 & 0,945 & 0,556 & 173 & 266 & 10 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\textbf{Der Vergleich zeigt den Gewinn.} Bei der Standardschwelle 0,5 werden
+143 Ausfaelle erkannt und 40 verpasst. Im Kostenoptimum bei
+einem Verhaeltnis von 5:1 liegt die Schwelle bei 0,42: Es
+werden 161 Ausfaelle erkannt, nur noch \textbf{22 verpasst} --
+bei 164 Fehlalarmen. Der Recall steigt von 0,781 auf
+0,880.
+
+Je teurer ein verpasster Ausfall im Verhaeltnis zu einem Fehlalarm, desto
+niedriger die optimale Schwelle. Die richtige Zahl liegt beim Kreditgeber;
+der Bericht rechnet daher drei Verhaeltnisse durch.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.90\linewidth]{07_schwellenwerte.png}
+  \caption{Links: Precision, Recall und F1 ueber der Schwelle. Rechts: erwartete Kosten je Kostenverhaeltnis -- je teurer ein verpasster Ausfall, desto weiter wandert das Optimum nach links.}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.55\linewidth]{08_konfusion_050.png}
+  \caption{Verwirrungsmatrix bei der Standardschwelle 0,5.}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.55\linewidth]{09_konfusion_kosten.png}
+  \caption{Verwirrungsmatrix im Kostenoptimum 5:1. Der Anteil verpasster Ausfaelle sinkt deutlich.}
+\end{figure}
+

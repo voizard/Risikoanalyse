@@ -1,0 +1,26 @@
+\section{Methodik}
+
+Verglichen werden fuenf Verfahren: Trivialklassifikator (Baseline),
+logistische Regression, Random Forest, Gradient Boosting und ein neuronales
+Netz -- jeweils ohne und mit Ueberabtastung der Minderheitsklasse (SMOTE).
+
+\paragraph{Verschachtelte Kreuzvalidierung.}
+Die Bewertung laeuft ueber 10 aeussere Folds, die Hyperparameterwahl in einem
+inneren 3-Fold-Schritt. Damit sieht die Parameterwahl die Bewertungsdaten nie:
+Die Kennzahlen sind Messungen, keine Obergrenzen. SMOTE sitzt in der Pipeline
+und wirkt nur auf die Trainingsfolds, damit keine kuenstlichen Punkte in die
+Bewertung gelangen.
+
+\paragraph{Gepaarter Signifikanztest.}
+Die Fold-Ergebnisse je Modell beruhen auf denselben aeusseren Aufteilungen und
+sind damit gepaart. Ein Wilcoxon-Vorzeichen-Rang-Test prueft, ob ein
+Unterschied groesser ist als die Streuung zwischen den Folds -- strenger als
+der optische Vergleich von Fehlerbalken.
+
+\paragraph{Kostenmodell.}
+Zwei Fehler sind moeglich: ein verpasster Ausfall (falsch negativ, teuer) und
+ein Fehlalarm (falsch positiv, kostet eine Pruefung). Mit einem
+Kostenverhaeltnis von $k{:}1$ laesst sich die Schwelle aus dem erwarteten
+Nutzen ableiten, statt sie bei 0,5 festzulegen. Gerechnet werden die
+Verhaeltnisse 1:1, 5:1 und 10:1, weil die echten Zahlen beim Kreditgeber
+liegen.

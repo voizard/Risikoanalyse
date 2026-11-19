@@ -101,11 +101,14 @@ kreditrisiko/
 │   ├── 03_drivers.py      driver analysis
 │   ├── 04_threshold.py    threshold + cost model
 │   ├── 05_significance.py paired Wilcoxon tests
-│   └── report.py          builds the PDF report
+│   └── report.py          builds the LaTeX sources and the PDF
 ├── data/                  README + fetch script (no data committed)
 ├── figures/               exported figures
 ├── results/               JSON + German-format CSV outputs
-└── report/                the PDF report and its Markdown source
+└── report/
+    ├── kreditrisiko_bericht.tex   generated main file (do not edit)
+    ├── parts/                     one .tex per chapter
+    └── kreditrisiko_bericht.pdf   compiled report
 ```
 
 ## Reproduction
@@ -120,10 +123,12 @@ python3 src/05_significance.py
 python3 src/report.py
 ```
 
-Requires `scikit-learn`, `imbalanced-learn`, `scipy`, `numpy`, `matplotlib`,
-`markdown` and `weasyprint`. Result CSVs use German number formatting
-(decimal comma, semicolon separator, UTF-8 BOM) for direct import into Power BI
-with a German locale.
+Requires `scikit-learn`, `imbalanced-learn`, `scipy`, `numpy`, `matplotlib`
+and [Tectonic](https://tectonic-typesetting.github.io/) for the PDF.
+`src/report.py` writes the LaTeX sources under `report/` and compiles them;
+run it with `--no-build` to generate the `.tex` files only.
+Result CSVs use German number formatting (decimal comma, semicolon separator,
+UTF-8 BOM) for direct import into Power BI with a German locale.
 
 ## Limitations
 

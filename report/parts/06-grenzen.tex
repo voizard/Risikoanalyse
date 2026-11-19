@@ -1,0 +1,32 @@
+\section{Grenzen}
+
+\begin{itemize}
+  \item \textbf{Nur 700 Zeilen.} Die Kennzahlen tragen Bootstrap-Intervalle
+        bzw. Fold-Streuung, sind aber von begrenzter Praezision.
+  \item \textbf{Kein Zeitbezug.} Es gibt keinen Beobachtungszeitpunkt, zu
+        dem die Merkmale erhoben wurden. Das Modell sagt eine Zugehoerigkeit
+        vorher, kein Ereignis zu einem Zeitpunkt.
+  \item \textbf{Die 450 ungelabelten Zeilen bleiben ungenutzt.} Sie tragen
+        keine Zielvariable; ein halbueberwachter Ansatz waere moeglich, aber
+        nur mit zusaetzlicher Annahme.
+  \item \textbf{Das Kostenmodell ist eine Annahme.} Die Verhaeltnisse 1:1,
+        5:1 und 10:1 sind Szenarien, keine Messung. Die belastbare Zahl
+        liefert der Kreditgeber.
+  \item \textbf{Keine Ursachenaussage.} Die Koeffizienten zeigen
+        Zusammenhang, nicht Wirkung.
+\end{itemize}
+
+\section{Reproduktion}
+
+\begin{lstlisting}[language=bash]
+python3 data/fetch_data.py       # Rohdaten holen + Form pruefen
+python3 src/01_describe.py       # Kennzahlen + Abbildungen
+python3 src/02_models.py         # Modellvergleich (verschachtelte CV)
+python3 src/03_drivers.py        # Treiberanalyse
+python3 src/04_threshold.py      # Schwellenwert + Kostenmodell
+python3 src/05_significance.py   # gepaarter Wilcoxon-Test
+python3 src/report.py            # dieses PDF (LaTeX ueber Tectonic)
+\end{lstlisting}
+
+Die Ergebnisdateien liegen in \texttt{results/} (JSON und CSV im deutschen
+Power-BI-Format), die Abbildungen in \texttt{figures/}.
