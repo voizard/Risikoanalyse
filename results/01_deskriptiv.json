@@ -1,0 +1,178 @@
+{
+  "n_labeled": 700,
+  "n_ausfaelle": 183,
+  "n_ohne": 517,
+  "ausfallquote_pct": 26.14,
+  "merkmale": {
+    "age": {
+      "gesamt": {
+        "mean": 34.86,
+        "std": 7.992,
+        "min": 20.0,
+        "max": 56.0
+      },
+      "ohne_ausfall": {
+        "mean": 35.515
+      },
+      "mit_ausfall": {
+        "mean": 33.011
+      }
+    },
+    "ed": {
+      "gesamt": {
+        "mean": 1.723,
+        "std": 0.928,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "ohne_ausfall": {
+        "mean": 1.66
+      },
+      "mit_ausfall": {
+        "mean": 1.902
+      }
+    },
+    "employ": {
+      "gesamt": {
+        "mean": 8.389,
+        "std": 6.653,
+        "min": 0.0,
+        "max": 31.0
+      },
+      "ohne_ausfall": {
+        "mean": 9.509
+      },
+      "mit_ausfall": {
+        "mean": 5.224
+      }
+    },
+    "address": {
+      "gesamt": {
+        "mean": 8.279,
+        "std": 6.82,
+        "min": 0.0,
+        "max": 34.0
+      },
+      "ohne_ausfall": {
+        "mean": 8.946
+      },
+      "mit_ausfall": {
+        "mean": 6.393
+      }
+    },
+    "income": {
+      "gesamt": {
+        "mean": 45.601,
+        "std": 36.788,
+        "min": 14.0,
+        "max": 446.0
+      },
+      "ohne_ausfall": {
+        "mean": 47.155
+      },
+      "mit_ausfall": {
+        "mean": 41.213
+      }
+    },
+    "debtinc": {
+      "gesamt": {
+        "mean": 10.261,
+        "std": 6.822,
+        "min": 0.4,
+        "max": 41.3
+      },
+      "ohne_ausfall": {
+        "mean": 8.679
+      },
+      "mit_ausfall": {
+        "mean": 14.728
+      }
+    },
+    "creddebt": {
+      "gesamt": {
+        "mean": 1.554,
+        "std": 2.116,
+        "min": 0.012,
+        "max": 20.561
+      },
+      "ohne_ausfall": {
+        "mean": 1.245
+      },
+      "mit_ausfall": {
+        "mean": 2.424
+      }
+    },
+    "othdebt": {
+      "gesamt": {
+        "mean": 3.058,
+        "std": 3.285,
+        "min": 0.046,
+        "max": 27.034
+      },
+      "ohne_ausfall": {
+        "mean": 2.773
+      },
+      "mit_ausfall": {
+        "mean": 3.863
+      }
+    }
+  },
+  "auc_einzelmerkmale": {
+    "age": 0.3968,
+    "ed": 0.574,
+    "employ": 0.2954,
+    "address": 0.3888,
+    "income": 0.3998,
+    "debtinc": 0.7353,
+    "creddebt": 0.6362,
+    "othdebt": 0.5869
+  },
+  "ausfallquote_nach_bildung": {
+    "1": {
+      "n": 372,
+      "ausfaelle": 79,
+      "quote_pct": 21.2,
+      "ki95": [
+        17.4,
+        25.7
+      ]
+    },
+    "2": {
+      "n": 198,
+      "ausfaelle": 59,
+      "quote_pct": 29.8,
+      "ki95": [
+        23.9,
+        36.5
+      ]
+    },
+    "3": {
+      "n": 87,
+      "ausfaelle": 30,
+      "quote_pct": 34.5,
+      "ki95": [
+        25.3,
+        44.9
+      ]
+    },
+    "4": {
+      "n": 38,
+      "ausfaelle": 14,
+      "quote_pct": 36.8,
+      "ki95": [
+        23.4,
+        52.7
+      ]
+    },
+    "5": {
+      "n": 5,
+      "ausfaelle": 1,
+      "quote_pct": 20.0,
+      "ki95": [
+        3.6,
+        62.4
+      ]
+    }
+  },
+  "korrelation_ed_debtinc": 0.0088
+}

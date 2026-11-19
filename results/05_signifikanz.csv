@@ -1,0 +1,16 @@
+﻿variante_a;variante_b;f1_a;f1_b;delta_f1;p_wert;befund
+Trivial (Mehrheitsklasse) + SMOTE;Trivial (Mehrheitsklasse);0,0000;0,0000;0,0000;1,0000;nicht unterscheidbar
+Logistische Regression + SMOTE;Logistische Regression;0,6307;0,6302;0,0005;0,8438;nicht unterscheidbar
+Random Forest + SMOTE;Random Forest;0,5889;0,6092;-0,0202;0,0391;signifikant
+Gradient Boosting + SMOTE;Gradient Boosting;0,5927;0,5530;0,0396;0,2324;nicht unterscheidbar
+Neuronales Netz + SMOTE;Neuronales Netz;0,5814;0,4964;0,0851;0,0371;signifikant
+Logistische Regression;Trivial (Mehrheitsklasse);0,6302;0,0000;0,6302;0,0020;signifikant
+Random Forest;Trivial (Mehrheitsklasse);0,6092;0,0000;0,6092;0,0020;signifikant
+Gradient Boosting;Trivial (Mehrheitsklasse);0,5530;0,0000;0,5530;0,0020;signifikant
+Neuronales Netz;Trivial (Mehrheitsklasse);0,4964;0,0000;0,4964;0,0020;signifikant
+Logistische Regression;Random Forest;0,6302;0,6092;0,0210;0,1641;nicht unterscheidbar
+Logistische Regression;Gradient Boosting;0,6302;0,5530;0,0772;0,0547;nicht unterscheidbar
+Logistische Regression;Neuronales Netz;0,6302;0,4964;0,1338;0,0039;signifikant
+Random Forest;Gradient Boosting;0,6092;0,5530;0,0562;0,0977;nicht unterscheidbar
+Random Forest;Neuronales Netz;0,6092;0,4964;0,1128;0,0195;signifikant
+Gradient Boosting;Neuronales Netz;0,5530;0,4964;0,0567;0,1309;nicht unterscheidbar

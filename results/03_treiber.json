@@ -1,0 +1,120 @@
+{
+  "logreg": {
+    "age": {
+      "coef": 0.27,
+      "odds_ratio": 1.31,
+      "ki95_coef": [
+        -0.003,
+        0.528
+      ],
+      "signifikant": false
+    },
+    "ed": {
+      "coef": 0.113,
+      "odds_ratio": 1.12,
+      "ki95_coef": [
+        -0.096,
+        0.311
+      ],
+      "signifikant": false
+    },
+    "employ": {
+      "coef": -1.61,
+      "odds_ratio": 0.2,
+      "ki95_coef": [
+        -2.069,
+        -1.261
+      ],
+      "signifikant": true
+    },
+    "address": {
+      "coef": -0.663,
+      "odds_ratio": 0.515,
+      "ki95_coef": [
+        -1.041,
+        -0.358
+      ],
+      "signifikant": true
+    },
+    "income": {
+      "coef": -0.292,
+      "odds_ratio": 0.747,
+      "ki95_coef": [
+        -0.849,
+        0.138
+      ],
+      "signifikant": false
+    },
+    "debtinc": {
+      "coef": 0.512,
+      "odds_ratio": 1.669,
+      "ki95_coef": [
+        0.172,
+        0.879
+      ],
+      "signifikant": true
+    },
+    "creddebt": {
+      "coef": 1.213,
+      "odds_ratio": 3.364,
+      "ki95_coef": [
+        0.855,
+        1.689
+      ],
+      "signifikant": true
+    },
+    "othdebt": {
+      "coef": 0.116,
+      "odds_ratio": 1.123,
+      "ki95_coef": [
+        -0.289,
+        0.533
+      ],
+      "signifikant": false
+    }
+  },
+  "rf_importance": {
+    "age": 0.1023,
+    "ed": 0.0358,
+    "employ": 0.1692,
+    "address": 0.1014,
+    "income": 0.104,
+    "debtinc": 0.1968,
+    "creddebt": 0.1627,
+    "othdebt": 0.1278
+  },
+  "permutation": {
+    "age": {
+      "mean": 0.0066,
+      "std": 0.0088
+    },
+    "ed": {
+      "mean": 0.0099,
+      "std": 0.0046
+    },
+    "employ": {
+      "mean": 0.1261,
+      "std": 0.022
+    },
+    "address": {
+      "mean": 0.0097,
+      "std": 0.0092
+    },
+    "income": {
+      "mean": 0.0052,
+      "std": 0.0047
+    },
+    "debtinc": {
+      "mean": 0.061,
+      "std": 0.024
+    },
+    "creddebt": {
+      "mean": 0.0392,
+      "std": 0.0147
+    },
+    "othdebt": {
+      "mean": 0.0099,
+      "std": 0.0075
+    }
+  }
+}

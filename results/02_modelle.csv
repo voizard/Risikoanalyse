@@ -1,0 +1,101 @@
+﻿modell;fold;precision;recall;f1;accuracy;roc_auc;pr_auc;best_params
+Trivial (Mehrheitsklasse);1;0,0000;0,0000;0,0000;0,7286;0,5000;0,2714;{}
+Trivial (Mehrheitsklasse);2;0,0000;0,0000;0,0000;0,7286;0,5000;0,2714;{}
+Trivial (Mehrheitsklasse);3;0,0000;0,0000;0,0000;0,7286;0,5000;0,2714;{}
+Trivial (Mehrheitsklasse);4;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse);5;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse);6;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse);7;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse);8;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse);9;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse);10;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse) + SMOTE;1;0,0000;0,0000;0,0000;0,7286;0,5000;0,2714;{}
+Trivial (Mehrheitsklasse) + SMOTE;2;0,0000;0,0000;0,0000;0,7286;0,5000;0,2714;{}
+Trivial (Mehrheitsklasse) + SMOTE;3;0,0000;0,0000;0,0000;0,7286;0,5000;0,2714;{}
+Trivial (Mehrheitsklasse) + SMOTE;4;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse) + SMOTE;5;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse) + SMOTE;6;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse) + SMOTE;7;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse) + SMOTE;8;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse) + SMOTE;9;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Trivial (Mehrheitsklasse) + SMOTE;10;0,0000;0,0000;0,0000;0,7429;0,5000;0,2571;{}
+Logistische Regression;1;0,4800;0,6316;0,5455;0,7143;0,7637;0,5643;"{""clf__C"": 0.1}"
+Logistische Regression;2;0,5484;0,8947;0,6800;0,7714;0,8731;0,6899;"{""clf__C"": 10.0}"
+Logistische Regression;3;0,7619;0,8421;0,8000;0,8857;0,9247;0,8482;"{""clf__C"": 0.1}"
+Logistische Regression;4;0,5714;0,8889;0,6957;0,8000;0,8590;0,7285;"{""clf__C"": 1.0}"
+Logistische Regression;5;0,5000;0,7222;0,5909;0,7429;0,8440;0,6945;"{""clf__C"": 0.1}"
+Logistische Regression;6;0,4583;0,6111;0,5238;0,7143;0,7350;0,5717;"{""clf__C"": 1.0}"
+Logistische Regression;7;0,5000;0,6667;0,5714;0,7429;0,8291;0,7276;"{""clf__C"": 1.0}"
+Logistische Regression;8;0,6000;1,0000;0,7500;0,8286;0,9327;0,7667;"{""clf__C"": 1.0}"
+Logistische Regression;9;0,4242;0,7778;0,5490;0,6714;0,8494;0,6835;"{""clf__C"": 1.0}"
+Logistische Regression;10;0,4828;0,7778;0,5957;0,7286;0,8964;0,7888;"{""clf__C"": 10.0}"
+Logistische Regression + SMOTE;1;0,4800;0,6316;0,5455;0,7143;0,7657;0,5657;"{""clf__C"": 0.1}"
+Logistische Regression + SMOTE;2;0,5312;0,8947;0,6667;0,7571;0,8700;0,6610;"{""clf__C"": 0.1}"
+Logistische Regression + SMOTE;3;0,7727;0,8947;0,8293;0,9000;0,9257;0,8439;"{""clf__C"": 0.1}"
+Logistische Regression + SMOTE;4;0,5926;0,8889;0,7111;0,8143;0,8600;0,7282;"{""clf__C"": 1.0}"
+Logistische Regression + SMOTE;5;0,5000;0,7222;0,5909;0,7429;0,8504;0,7227;"{""clf__C"": 10.0}"
+Logistische Regression + SMOTE;6;0,4545;0,5556;0,5000;0,7143;0,7404;0,6007;"{""clf__C"": 0.1}"
+Logistische Regression + SMOTE;7;0,5000;0,6667;0,5714;0,7429;0,8344;0,7312;"{""clf__C"": 1.0}"
+Logistische Regression + SMOTE;8;0,6000;1,0000;0,7500;0,8286;0,9295;0,7483;"{""clf__C"": 1.0}"
+Logistische Regression + SMOTE;9;0,4062;0,7222;0,5200;0,6571;0,8504;0,6608;"{""clf__C"": 0.1}"
+Logistische Regression + SMOTE;10;0,5185;0,7778;0,6222;0,7571;0,9006;0,8015;"{""clf__C"": 10.0}"
+Random Forest;1;0,5238;0,5789;0,5500;0,7429;0,7327;0,4523;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest;2;0,5417;0,6842;0,6047;0,7571;0,8163;0,6078;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest;3;0,7368;0,7368;0,7368;0,8571;0,8947;0,7607;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest;4;0,5600;0,7778;0,6512;0,7857;0,7959;0,5601;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest;5;0,4783;0,6111;0,5366;0,7286;0,8184;0,6591;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest;6;0,4348;0,5556;0,4878;0,7000;0,7126;0,5033;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest;7;0,5000;0,6667;0,5714;0,7429;0,7938;0,7153;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest;8;0,5862;0,9444;0,7234;0,8143;0,8974;0,7107;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest;9;0,5357;0,8333;0,6522;0,7714;0,8472;0,6292;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest;10;0,4815;0,7222;0,5778;0,7286;0,8814;0,7478;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest + SMOTE;1;0,5000;0,4737;0,4865;0,7286;0,7379;0,4552;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest + SMOTE;2;0,5500;0,5789;0,5641;0,7571;0,8153;0,5957;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest + SMOTE;3;0,7222;0,6842;0,7027;0,8429;0,8633;0,6562;"{""clf__max_depth"": null, ""clf__n_estimators"": 300}"
+Random Forest + SMOTE;4;0,5185;0,7778;0,6222;0,7571;0,8002;0,5387;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest + SMOTE;5;0,5000;0,6111;0,5500;0,7429;0,8194;0,6883;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest + SMOTE;6;0,4286;0,5000;0,4615;0,7000;0,6955;0,4598;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest + SMOTE;7;0,5217;0,6667;0,5854;0,7571;0,7821;0,6976;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest + SMOTE;8;0,5862;0,9444;0,7234;0,8143;0,8964;0,6613;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest + SMOTE;9;0,5185;0,7778;0,6222;0,7571;0,8344;0,5887;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Random Forest + SMOTE;10;0,5000;0,6667;0,5714;0,7429;0,8868;0,7552;"{""clf__max_depth"": 6, ""clf__n_estimators"": 300}"
+Gradient Boosting;1;0,4615;0,3158;0,3750;0,7143;0,7451;0,5585;"{""clf__learning_rate"": 0.1}"
+Gradient Boosting;2;0,5833;0,3684;0,4516;0,7571;0,8246;0,5853;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting;3;0,7333;0,5789;0,6471;0,8286;0,8834;0,7667;"{""clf__learning_rate"": 0.1}"
+Gradient Boosting;4;0,6429;0,5000;0,5625;0,8000;0,8333;0,6417;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting;5;0,6923;0,5000;0,5806;0,8143;0,8333;0,6947;"{""clf__learning_rate"": 0.1}"
+Gradient Boosting;6;0,5714;0,4444;0,5000;0,7714;0,7179;0,5080;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting;7;0,8000;0,4444;0,5714;0,8286;0,8098;0,6794;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting;8;0,6111;0,6111;0,6111;0,8000;0,8494;0,6206;"{""clf__learning_rate"": 0.1}"
+Gradient Boosting;9;0,7143;0,5556;0,6250;0,8286;0,8312;0,6751;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting;10;0,6667;0,5556;0,6061;0,8143;0,8344;0,6560;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting + SMOTE;1;0,6250;0,5263;0,5714;0,7857;0,7853;0,5976;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting + SMOTE;2;0,5625;0,4737;0,5143;0,7571;0,8132;0,5555;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting + SMOTE;3;0,6842;0,6842;0,6842;0,8286;0,8844;0,7416;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting + SMOTE;4;0,6087;0,7778;0,6829;0,8143;0,8291;0,6914;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting + SMOTE;5;0,4737;0,5000;0,4865;0,7286;0,8130;0,6146;"{""clf__learning_rate"": 0.1}"
+Gradient Boosting + SMOTE;6;0,4000;0,3333;0,3636;0,7000;0,6816;0,4174;"{""clf__learning_rate"": 0.1}"
+Gradient Boosting + SMOTE;7;0,7500;0,6667;0,7059;0,8571;0,8034;0,7646;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting + SMOTE;8;0,5600;0,7778;0,6512;0,7857;0,8622;0,5562;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting + SMOTE;9;0,5600;0,7778;0,6512;0,7857;0,8504;0,6399;"{""clf__learning_rate"": 0.05}"
+Gradient Boosting + SMOTE;10;0,5714;0,6667;0,6154;0,7857;0,8408;0,6146;"{""clf__learning_rate"": 0.1}"
+Neuronales Netz;1;0,5455;0,3158;0,4000;0,7429;0,7915;0,5713;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz;2;0,6875;0,5789;0,6286;0,8143;0,8380;0,6836;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz;3;0,6250;0,5263;0,5714;0,7857;0,8968;0,7540;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz;4;0,5625;0,5000;0,5294;0,7714;0,7970;0,6620;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [32, 16]}"
+Neuronales Netz;5;0,5455;0,3333;0,4138;0,7571;0,8120;0,6075;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz;6;0,5385;0,3889;0,4516;0,7571;0,6870;0,4943;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz;7;0,6667;0,4444;0,5333;0,8000;0,7959;0,6270;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz;8;0,4167;0,2778;0,3333;0,7143;0,8109;0,5704;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [32, 16]}"
+Neuronales Netz;9;0,5000;0,4444;0,4706;0,7429;0,8066;0,5490;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz;10;0,6000;0,6667;0,6316;0,8000;0,8376;0,6693;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [32, 16]}"
+Neuronales Netz + SMOTE;1;0,5000;0,5789;0,5366;0,7286;0,7358;0,5164;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz + SMOTE;2;0,4783;0,5789;0,5238;0,7143;0,7822;0,6245;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz + SMOTE;3;0,6250;0,7895;0,6977;0,8143;0,8978;0,7438;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz + SMOTE;4;0,6000;0,8333;0,6977;0,8143;0,8451;0,6878;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz + SMOTE;5;0,5417;0,7222;0,6190;0,7714;0,7842;0,5461;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz + SMOTE;6;0,4762;0,5556;0,5128;0,7286;0,6752;0,4529;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz + SMOTE;7;0,4444;0,4444;0,4444;0,7143;0,7692;0,6064;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz + SMOTE;8;0,4583;0,6111;0,5238;0,7143;0,7917;0,5086;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz + SMOTE;9;0,5185;0,7778;0,6222;0,7571;0,8034;0,6074;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"
+Neuronales Netz + SMOTE;10;0,5385;0,7778;0,6364;0,7714;0,8376;0,6578;"{""clf__alpha"": 0.0001, ""clf__hidden_layer_sizes"": [16, 8]}"

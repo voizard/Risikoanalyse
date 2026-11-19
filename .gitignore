@@ -1,0 +1,19 @@
+# --- Rohdaten: fremde Datei, nicht ins Repository ---
+data/*.csv
+!data/README.md
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# --- Laufzeit-Artefakte ---
+results/*.log
+*.duckdb
+
+# --- System ---
+.DS_Store
+Thumbs.db

@@ -1,0 +1,322 @@
+{
+  "Trivial (Mehrheitsklasse)": {
+    "f1": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 10
+    },
+    "precision": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 10
+    },
+    "recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 10
+    },
+    "accuracy": {
+      "mean": 0.7386,
+      "std": 0.0069,
+      "n": 10
+    },
+    "roc_auc": {
+      "mean": 0.5,
+      "std": 0.0,
+      "n": 10
+    },
+    "pr_auc": {
+      "mean": 0.2614,
+      "std": 0.0069,
+      "n": 10
+    }
+  },
+  "Trivial (Mehrheitsklasse) + SMOTE": {
+    "f1": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 10
+    },
+    "precision": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 10
+    },
+    "recall": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 10
+    },
+    "accuracy": {
+      "mean": 0.7386,
+      "std": 0.0069,
+      "n": 10
+    },
+    "roc_auc": {
+      "mean": 0.5,
+      "std": 0.0,
+      "n": 10
+    },
+    "pr_auc": {
+      "mean": 0.2614,
+      "std": 0.0069,
+      "n": 10
+    }
+  },
+  "Logistische Regression": {
+    "f1": {
+      "mean": 0.6302,
+      "std": 0.095,
+      "n": 10
+    },
+    "precision": {
+      "mean": 0.5327,
+      "std": 0.0963,
+      "n": 10
+    },
+    "recall": {
+      "mean": 0.7813,
+      "std": 0.1265,
+      "n": 10
+    },
+    "accuracy": {
+      "mean": 0.76,
+      "std": 0.0631,
+      "n": 10
+    },
+    "roc_auc": {
+      "mean": 0.8507,
+      "std": 0.0635,
+      "n": 10
+    },
+    "pr_auc": {
+      "mean": 0.7064,
+      "std": 0.0887,
+      "n": 10
+    }
+  },
+  "Logistische Regression + SMOTE": {
+    "f1": {
+      "mean": 0.6307,
+      "std": 0.1071,
+      "n": 10
+    },
+    "precision": {
+      "mean": 0.5356,
+      "std": 0.1016,
+      "n": 10
+    },
+    "recall": {
+      "mean": 0.7754,
+      "std": 0.1408,
+      "n": 10
+    },
+    "accuracy": {
+      "mean": 0.7629,
+      "std": 0.0687,
+      "n": 10
+    },
+    "roc_auc": {
+      "mean": 0.8527,
+      "std": 0.0618,
+      "n": 10
+    },
+    "pr_auc": {
+      "mean": 0.7064,
+      "std": 0.0857,
+      "n": 10
+    }
+  },
+  "Random Forest": {
+    "f1": {
+      "mean": 0.6092,
+      "std": 0.0809,
+      "n": 10
+    },
+    "precision": {
+      "mean": 0.5379,
+      "std": 0.0826,
+      "n": 10
+    },
+    "recall": {
+      "mean": 0.7111,
+      "std": 0.1197,
+      "n": 10
+    },
+    "accuracy": {
+      "mean": 0.7629,
+      "std": 0.0463,
+      "n": 10
+    },
+    "roc_auc": {
+      "mean": 0.8191,
+      "std": 0.0637,
+      "n": 10
+    },
+    "pr_auc": {
+      "mean": 0.6346,
+      "std": 0.1046,
+      "n": 10
+    }
+  },
+  "Random Forest + SMOTE": {
+    "f1": {
+      "mean": 0.5889,
+      "std": 0.0833,
+      "n": 10
+    },
+    "precision": {
+      "mean": 0.5346,
+      "std": 0.0772,
+      "n": 10
+    },
+    "recall": {
+      "mean": 0.6681,
+      "std": 0.1406,
+      "n": 10
+    },
+    "accuracy": {
+      "mean": 0.76,
+      "std": 0.0409,
+      "n": 10
+    },
+    "roc_auc": {
+      "mean": 0.8131,
+      "std": 0.0632,
+      "n": 10
+    },
+    "pr_auc": {
+      "mean": 0.6097,
+      "std": 0.1011,
+      "n": 10
+    }
+  },
+  "Gradient Boosting": {
+    "f1": {
+      "mean": 0.553,
+      "std": 0.0858,
+      "n": 10
+    },
+    "precision": {
+      "mean": 0.6477,
+      "std": 0.0962,
+      "n": 10
+    },
+    "recall": {
+      "mean": 0.4874,
+      "std": 0.0946,
+      "n": 10
+    },
+    "accuracy": {
+      "mean": 0.7957,
+      "std": 0.0375,
+      "n": 10
+    },
+    "roc_auc": {
+      "mean": 0.8162,
+      "std": 0.049,
+      "n": 10
+    },
+    "pr_auc": {
+      "mean": 0.6386,
+      "std": 0.0742,
+      "n": 10
+    }
+  },
+  "Gradient Boosting + SMOTE": {
+    "f1": {
+      "mean": 0.5927,
+      "std": 0.1091,
+      "n": 10
+    },
+    "precision": {
+      "mean": 0.5796,
+      "std": 0.0986,
+      "n": 10
+    },
+    "recall": {
+      "mean": 0.6184,
+      "std": 0.1527,
+      "n": 10
+    },
+    "accuracy": {
+      "mean": 0.7829,
+      "std": 0.0461,
+      "n": 10
+    },
+    "roc_auc": {
+      "mean": 0.8164,
+      "std": 0.0557,
+      "n": 10
+    },
+    "pr_auc": {
+      "mean": 0.6193,
+      "std": 0.1006,
+      "n": 10
+    }
+  },
+  "Neuronales Netz": {
+    "f1": {
+      "mean": 0.4964,
+      "std": 0.0996,
+      "n": 10
+    },
+    "precision": {
+      "mean": 0.5688,
+      "std": 0.0801,
+      "n": 10
+    },
+    "recall": {
+      "mean": 0.4477,
+      "std": 0.1233,
+      "n": 10
+    },
+    "accuracy": {
+      "mean": 0.7686,
+      "std": 0.0314,
+      "n": 10
+    },
+    "roc_auc": {
+      "mean": 0.8073,
+      "std": 0.0526,
+      "n": 10
+    },
+    "pr_auc": {
+      "mean": 0.6188,
+      "std": 0.076,
+      "n": 10
+    }
+  },
+  "Neuronales Netz + SMOTE": {
+    "f1": {
+      "mean": 0.5814,
+      "std": 0.0851,
+      "n": 10
+    },
+    "precision": {
+      "mean": 0.5181,
+      "std": 0.0594,
+      "n": 10
+    },
+    "recall": {
+      "mean": 0.667,
+      "std": 0.1295,
+      "n": 10
+    },
+    "accuracy": {
+      "mean": 0.7529,
+      "std": 0.0393,
+      "n": 10
+    },
+    "roc_auc": {
+      "mean": 0.7922,
+      "std": 0.0612,
+      "n": 10
+    },
+    "pr_auc": {
+      "mean": 0.5952,
+      "std": 0.0895,
+      "n": 10
+    }
+  }
+}

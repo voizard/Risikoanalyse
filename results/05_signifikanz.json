@@ -1,0 +1,152 @@
+[
+  {
+    "a": "Trivial (Mehrheitsklasse) + SMOTE",
+    "b": "Trivial (Mehrheitsklasse)",
+    "n": 10,
+    "mittel_a": 0.0,
+    "mittel_b": 0.0,
+    "delta": 0.0,
+    "p": 1.0,
+    "befund": "nicht unterscheidbar"
+  },
+  {
+    "a": "Logistische Regression + SMOTE",
+    "b": "Logistische Regression",
+    "n": 10,
+    "mittel_a": 0.6307,
+    "mittel_b": 0.6302,
+    "delta": 0.0005,
+    "p": 0.8438,
+    "befund": "nicht unterscheidbar"
+  },
+  {
+    "a": "Random Forest + SMOTE",
+    "b": "Random Forest",
+    "n": 10,
+    "mittel_a": 0.5889,
+    "mittel_b": 0.6092,
+    "delta": -0.0202,
+    "p": 0.0391,
+    "befund": "signifikant"
+  },
+  {
+    "a": "Gradient Boosting + SMOTE",
+    "b": "Gradient Boosting",
+    "n": 10,
+    "mittel_a": 0.5927,
+    "mittel_b": 0.553,
+    "delta": 0.0396,
+    "p": 0.2324,
+    "befund": "nicht unterscheidbar"
+  },
+  {
+    "a": "Neuronales Netz + SMOTE",
+    "b": "Neuronales Netz",
+    "n": 10,
+    "mittel_a": 0.5814,
+    "mittel_b": 0.4964,
+    "delta": 0.0851,
+    "p": 0.0371,
+    "befund": "signifikant"
+  },
+  {
+    "a": "Logistische Regression",
+    "b": "Trivial (Mehrheitsklasse)",
+    "n": 10,
+    "mittel_a": 0.6302,
+    "mittel_b": 0.0,
+    "delta": 0.6302,
+    "p": 0.002,
+    "befund": "signifikant"
+  },
+  {
+    "a": "Random Forest",
+    "b": "Trivial (Mehrheitsklasse)",
+    "n": 10,
+    "mittel_a": 0.6092,
+    "mittel_b": 0.0,
+    "delta": 0.6092,
+    "p": 0.002,
+    "befund": "signifikant"
+  },
+  {
+    "a": "Gradient Boosting",
+    "b": "Trivial (Mehrheitsklasse)",
+    "n": 10,
+    "mittel_a": 0.553,
+    "mittel_b": 0.0,
+    "delta": 0.553,
+    "p": 0.002,
+    "befund": "signifikant"
+  },
+  {
+    "a": "Neuronales Netz",
+    "b": "Trivial (Mehrheitsklasse)",
+    "n": 10,
+    "mittel_a": 0.4964,
+    "mittel_b": 0.0,
+    "delta": 0.4964,
+    "p": 0.002,
+    "befund": "signifikant"
+  },
+  {
+    "a": "Logistische Regression",
+    "b": "Random Forest",
+    "n": 10,
+    "mittel_a": 0.6302,
+    "mittel_b": 0.6092,
+    "delta": 0.021,
+    "p": 0.1641,
+    "befund": "nicht unterscheidbar"
+  },
+  {
+    "a": "Logistische Regression",
+    "b": "Gradient Boosting",
+    "n": 10,
+    "mittel_a": 0.6302,
+    "mittel_b": 0.553,
+    "delta": 0.0772,
+    "p": 0.0547,
+    "befund": "nicht unterscheidbar"
+  },
+  {
+    "a": "Logistische Regression",
+    "b": "Neuronales Netz",
+    "n": 10,
+    "mittel_a": 0.6302,
+    "mittel_b": 0.4964,
+    "delta": 0.1338,
+    "p": 0.0039,
+    "befund": "signifikant"
+  },
+  {
+    "a": "Random Forest",
+    "b": "Gradient Boosting",
+    "n": 10,
+    "mittel_a": 0.6092,
+    "mittel_b": 0.553,
+    "delta": 0.0562,
+    "p": 0.0977,
+    "befund": "nicht unterscheidbar"
+  },
+  {
+    "a": "Random Forest",
+    "b": "Neuronales Netz",
+    "n": 10,
+    "mittel_a": 0.6092,
+    "mittel_b": 0.4964,
+    "delta": 0.1128,
+    "p": 0.0195,
+    "befund": "signifikant"
+  },
+  {
+    "a": "Gradient Boosting",
+    "b": "Neuronales Netz",
+    "n": 10,
+    "mittel_a": 0.553,
+    "mittel_b": 0.4964,
+    "delta": 0.0567,
+    "p": 0.1309,
+    "befund": "nicht unterscheidbar"
+  }
+]
