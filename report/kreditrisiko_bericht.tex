@@ -53,7 +53,7 @@ Entscheidungsschwelle unter ungleichen Kosten}
 
 \begin{abstract}
 \noindent
-Untersucht wird, wie sich Kreditausfaelle aus acht Merkmalen vorhersagen lassen und wo die Entscheidungsschwelle liegen sollte, wenn ein verpasster Ausfall teurer ist als ein Fehlalarm. Grundlage sind 700 gelabelte Kreditnehmer mit einer Ausfallquote von 26,1~\%. Verglichen werden fuenf Verfahren unter verschachtelter Kreuzvalidierung. Das beste Modell (Logistische Regression + SMOTE) erreicht einen ROC-AUC-Wert von 0,853, bei der Standardschwelle 0,5 aber nur F1 = 0,631. Ursache ist die willkuerliche Schwelle: Im Kostenoptimum fuer ein Verhaeltnis von 5:1 sinkt die Zahl verpasster Ausfaelle von 40 auf 22, der Recall steigt von 0,781 auf 0,880. Die Treiber sind Beschaeftigungsjahre (schuetzend), Kreditkartenschuld und Schulden-Einkommens-Quote (riskant).
+Untersucht wird, wie sich Kreditausfaelle aus acht Merkmalen vorhersagen lassen und wo die Entscheidungsschwelle liegen sollte, wenn ein verpasster Ausfall teurer ist als ein Fehlalarm. Grundlage sind 700 gelabelte Kreditnehmer mit einer Ausfallquote von 26,1~\%. Verglichen werden fuenf Verfahren unter verschachtelter Kreuzvalidierung. Das beste Modell (Logistische Regression + SMOTE) erreicht einen ROC-AUC-Wert von 0,853, bei der Standardschwelle 0,5 aber nur F1 = 0,631. Ursache ist die willkuerliche Schwelle: Mit dem vom Auftraggeber genannten Kostenverhaeltnis von 50:1 (ein verpasster Ausfall kostet 50mal so viel wie eine Pruefung) sinkt die Zahl verpasster Ausfaelle von 40 auf 1 (0,995 statt 0,781 Recall) -- dafuer steigen die Fehlalarme auf 383. Die Treiber sind Beschaeftigungsjahre (schuetzend), Kreditkartenschuld und Schulden-Einkommens-Quote (riskant).
 \end{abstract}
 
 \newpage

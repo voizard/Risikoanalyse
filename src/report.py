@@ -272,9 +272,11 @@ der optische Vergleich von Fehlerbalken.
 Zwei Fehler sind moeglich: ein verpasster Ausfall (falsch negativ, teuer) und
 ein Fehlalarm (falsch positiv, kostet eine Pruefung). Mit einem
 Kostenverhaeltnis von $k{:}1$ laesst sich die Schwelle aus dem erwarteten
-Nutzen ableiten, statt sie bei 0,5 festzulegen. Gerechnet werden die
-Verhaeltnisse 1:1, 5:1 und 10:1, weil die echten Zahlen beim Kreditgeber
-liegen.
+Nutzen ableiten, statt sie bei 0,5 festzulegen. \textbf{Das vom Auftraggeber
+genannte Verhaeltnis betraegt 50:1} -- ein verpasster Ausfall kostet also das
+50-fache einer Pruefung. Dieses Leitverhaeltnis steht im Mittelpunkt; die
+Verhaeltnisse 1:1, 5:1 und 10:1 bleiben als Vergleichsszenarien daneben
+stehen.
 """
 
     # ---- 4 Ergebnisse
@@ -365,7 +367,7 @@ sind im Modell \emph{{nicht}} von Null unterscheidbar.
         schwell_zeilen.append([f"{t_['verhaeltnis']}:1", de(t_["precision"]),
                                de(t_["recall"]), de(t_["f1"]), str(t_["tp"]),
                                str(t_["fp"]), str(t_["fn"])])
-    s5 = next(t_ for t_ in s["optima"] if t_["verhaeltnis"] == 5)
+    s5 = next(t_ for t_ in s["optima"] if t_["verhaeltnis"] == 50)
     k5 = rf"""
 \section{{Schwellenwert und Kosten}}
 \label{{sec:schwelle}}
@@ -377,15 +379,21 @@ Bei einem Ausfallanteil von {de(d['ausfallquote_pct'],1)}~\% ist die Schwelle
      schwell_zeilen, "lrrrrrr")}
 
 \textbf{{Der Vergleich zeigt den Gewinn.}} Bei der Standardschwelle 0,5 werden
-{st['tp']} Ausfaelle erkannt und {st['fn']} verpasst. Im Kostenoptimum bei
-einem Verhaeltnis von 5:1 liegt die Schwelle bei {de(s5['schwelle'],2)}: Es
-werden {s5['tp']} Ausfaelle erkannt, nur noch \textbf{{{s5['fn']} verpasst}} --
-bei {s5['fp']} Fehlalarmen. Der Recall steigt von {de(st['recall'])} auf
-{de(s5['recall'])}.
+{st['tp']} Ausfaelle erkannt und \textbf{{{st['fn']} verpasst}}. Mit dem vom
+Auftraggeber genannten Verhaeltnis \textbf{{{s5['verhaeltnis']}:1}} -- einem
+verpassten Ausfall stehen also {s5['verhaeltnis']} Pruefungen gegenueber --
+sinkt die optimale Schwelle auf {de(s5['schwelle'],3)}: Es werden {s5['tp']}
+Ausfaelle erkannt, nur noch \textbf{{{s5['fn']} verpasst}}, bei {s5['fp']}
+Fehlalarmen. Der Recall steigt von {de(st['recall'])} auf {de(s5['recall'])}.
+
+Das ist die ehrliche Rechnung: Bei diesem Kostenverhaeltnis ist es
+\emph{{rational}}, eine niedrige Schwelle zu fahren und viele Fehlalarme in
+Kauf zu nehmen. Ein Fehlalarm kostet eine Pruefung, ein verpasster Ausfall
+{s5['verhaeltnis']}mal so viel -- da lohnt sich der Pruefaufwand fast immer.
 
 Je teurer ein verpasster Ausfall im Verhaeltnis zu einem Fehlalarm, desto
-niedriger die optimale Schwelle. Die richtige Zahl liegt beim Kreditgeber;
-der Bericht rechnet daher drei Verhaeltnisse durch.
+niedriger die optimale Schwelle. Die Szenarien 1:1 bis 10:1 zeigen die
+Bandbreite; das Leitverhaeltnis {s5['verhaeltnis']}:1 ist die belastbare Zahl.
 
 {fig("07_schwellenwerte.png", "Links: Precision, Recall und F1 ueber der "
      "Schwelle. Rechts: erwartete Kosten je Kostenverhaeltnis -- je teurer "
@@ -394,8 +402,9 @@ der Bericht rechnet daher drei Verhaeltnisse durch.
 {fig("08_konfusion_050.png", "Verwirrungsmatrix bei der Standardschwelle 0,5.",
      r"0.55\linewidth")}
 
-{fig("09_konfusion_kosten.png", "Verwirrungsmatrix im Kostenoptimum 5:1. Der "
-     "Anteil verpasster Ausfaelle sinkt deutlich.", r"0.55\linewidth")}
+{fig("09_konfusion_kosten.png", "Verwirrungsmatrix im Kostenoptimum "
+     f"{s5['verhaeltnis']}:1. Fast kein Ausfall wird mehr verpasst -- dafuer "
+     "steigen die Fehlalarme.", r"0.55\linewidth")}
 """
 
     # ---- 6 Grenzen
@@ -411,9 +420,10 @@ der Bericht rechnet daher drei Verhaeltnisse durch.
   \item \textbf{{Die 450 ungelabelten Zeilen bleiben ungenutzt.}} Sie tragen
         keine Zielvariable; ein halbueberwachter Ansatz waere moeglich, aber
         nur mit zusaetzlicher Annahme.
-  \item \textbf{{Das Kostenmodell ist eine Annahme.}} Die Verhaeltnisse 1:1,
-        5:1 und 10:1 sind Szenarien, keine Messung. Die belastbare Zahl
-        liefert der Kreditgeber.
+  \item \textbf{{Das Kostenmodell.}} Das Verhaeltnis 50:1 ist die vom
+        Auftraggeber genannte Relation, keine Messung aus den Daten. Die
+        Szenarien 1:1 bis 10:1 zeigen, wie empfindlich das Optimum auf diese
+        Annahme reagiert.
   \item \textbf{{Keine Ursachenaussage.}} Die Koeffizienten zeigen
         Zusammenhang, nicht Wirkung.
 \end{{itemize}}
@@ -456,7 +466,7 @@ def main() -> None:
 
     bm = max(zus, key=lambda k: zus[k]["f1"]["mean"])
     m = zus[bm]
-    s5 = next(t for t in schw["optima"] if t["verhaeltnis"] == 5)
+    s5 = next(t for t in schw["optima"] if t["verhaeltnis"] == 50)
     st = schw["kennzahlen_standard"]
     heute = date.today()
     daten = {
@@ -473,10 +483,13 @@ def main() -> None:
             f"Kreuzvalidierung. Das beste Modell ({bm}) erreicht einen "
             f"ROC-AUC-Wert von {de(m['roc_auc']['mean'])}, bei der "
             f"Standardschwelle 0,5 aber nur F1 = {de(m['f1']['mean'])}. "
-            f"Ursache ist die willkuerliche Schwelle: Im Kostenoptimum fuer "
-            f"ein Verhaeltnis von 5:1 sinkt die Zahl verpasster Ausfaelle von "
-            f"{st['fn']} auf {s5['fn']}, der Recall steigt von "
-            f"{de(st['recall'])} auf {de(s5['recall'])}. Die Treiber sind "
+            f"Ursache ist die willkuerliche Schwelle: Mit dem vom "
+            f"Auftraggeber genannten Kostenverhaeltnis von "
+            f"{s5['verhaeltnis']}:1 (ein verpasster Ausfall kostet "
+            f"{s5['verhaeltnis']}mal so viel wie eine Pruefung) sinkt die "
+            f"Zahl verpasster Ausfaelle von {st['fn']} auf {s5['fn']} "
+            f"({de(s5['recall'],3)} statt {de(st['recall'],3)} Recall) -- "
+            f"dafuer steigen die Fehlalarme auf {s5['fp']}. Die Treiber sind "
             f"Beschaeftigungsjahre (schuetzend), Kreditkartenschuld und "
             f"Schulden-Einkommens-Quote (riskant)."
         ),

@@ -45,7 +45,10 @@ plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 9,
 BLUE, RED, GREEN = "#3b7dd8", "#c0392b", "#4a9d5f"
 
 # Verhaeltnis "Kosten eines verpassten Ausfalls" : "Kosten eines Fehlalarms"
-VERHAELTNISSE = [1, 5, 10]
+# 50:1 ist die vom Auftraggeber genannte echte Relation und damit das
+# Leitverhaeltnis; 1:1/5:1/10:1 bleiben als Vergleichsszenarien stehen.
+LEITVERHAELTNIS = 50
+VERHAELTNISSE = [1, 5, 10, LEITVERHAELTNIS]
 
 
 def out_of_fold_probs(X, y, seed=42):
@@ -110,10 +113,11 @@ def fig_schwellen(prob, y, tabelle):
     ax.axvline(best_f1["schwelle"], color=GREEN, ls="--", lw=1.4,
                label=f"bestes F1 ({best_f1['schwelle']:.2f})".replace(".", ","))
     for v in tabelle:
-        if v["verhaeltnis"] != 5:
+        if v["verhaeltnis"] != LEITVERHAELTNIS:
             continue
         ax.axvline(v["schwelle"], color="#8e44ad", ls="-.", lw=1.6,
-                   label=f"Kostenoptimum 5:1 ({v['schwelle']:.2f})".replace(".", ","))
+                   label=(f"Kostenoptimum {v['verhaeltnis']}:1 "
+                          f"({v['schwelle']:.2f})").replace(".", ","))
     ax.set_xlabel("Schwellenwert")
     ax.set_ylabel("Kennzahl")
     ax.set_ylim(0, 1.02)
@@ -125,7 +129,7 @@ def fig_schwellen(prob, y, tabelle):
     ax.set_axisbelow(True)
 
     # Rechts: erwartete Kosten ueber der Schwelle, je Verhaeltnis
-    farben = {1: "#7f8c8d", 5: "#8e44ad", 10: "#c0392b"}
+    farben = {1: "#7f8c8d", 5: "#8e44ad", 10: "#c0392b", 50: "#1f6f3f"}
     for v in tabelle:
         kosten_je = [kosten(prob, y, s, v["verhaeltnis"]) for s in schwellen]
         # normieren, damit die Kurven vergleichbar sind
@@ -227,13 +231,14 @@ def main():
     write_german_csv(RESULTS / "04_schwellen.csv", kopf, zeilen)
 
     print("\ngeschrieben:", fig_schwellen(prob, y, tabelle))
-    s5 = next(t["schwelle"] for t in tabelle if t["verhaeltnis"] == 5)
+    sleit = next(t["schwelle"] for t in tabelle
+                 if t["verhaeltnis"] == LEITVERHAELTNIS)
     print("geschrieben:", fig_konfusionsmatrix(
         prob, y, 0.5, "Verwirrungsmatrix bei Standard 0,5",
         FIGURES / "08_konfusion_050.png"))
     print("geschrieben:", fig_konfusionsmatrix(
-        prob, y, s5, "Verwirrungsmatrix im Kostenoptimum",
-        FIGURES / "09_konfusion_kosten.png"))
+        prob, y, sleit, f"Verwirrungsmatrix im Kostenoptimum "
+        f"{LEITVERHAELTNIS}:1", FIGURES / "09_konfusion_kosten.png"))
     print("geschrieben:", RESULTS / "04_schwellen.json")
     print("geschrieben:", RESULTS / "04_schwellen.csv")
 
