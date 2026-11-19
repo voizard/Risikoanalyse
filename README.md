@@ -64,7 +64,8 @@ The dataset (`bankloans`) covers 1,150 rows with 8 features plus the target
 `default`. **Only 700 rows carry a label**; the remaining 450 are a block
 without a target variable, and they contain just 150 distinct feature patterns
 repeated three times each. They are unusable for supervised learning and are
-excluded.
+excluded. **This is a deliberate decision:** the analysis rests on the 700
+labelled rows only.
 
 The raw file is **not** redistributed here (third-party data). Fetch and verify
 it with:

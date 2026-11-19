@@ -201,8 +201,8 @@ Kreditkartenschuld, sonstige Schulden) und der Zielvariable \texttt{{default}}.
 \textbf{{Nur 700 Zeilen tragen ein Label.}} Die uebrigen 450 sind ein Block
 ohne Zielvariable; sie enthalten ausserdem nur 150 verschiedene
 Merkmalsmuster, jedes dreifach wiederholt. Fuer ueberwachtes Lernen sind sie
-unbrauchbar und bleiben aussen vor -- sie dienen hoechstens dem Anwenden eines
-fertigen Modells.
+unbrauchbar und bleiben aussen vor. Die Analyse stuetzt sich daher
+\emph{{bewusst}} allein auf die 700 gelabelten Zeilen.
 
 Von den 700 gelabelten Kreditnehmern sind \textbf{{{d['n_ausfaelle']}
 ausgefallen ({de(d['ausfallquote_pct'],1)}~\%)}} -- ein moderat ungleicher
@@ -417,9 +417,11 @@ Bandbreite; das Leitverhaeltnis {s5['verhaeltnis']}:1 ist die belastbare Zahl.
   \item \textbf{{Kein Zeitbezug.}} Es gibt keinen Beobachtungszeitpunkt, zu
         dem die Merkmale erhoben wurden. Das Modell sagt eine Zugehoerigkeit
         vorher, kein Ereignis zu einem Zeitpunkt.
-  \item \textbf{{Die 450 ungelabelten Zeilen bleiben ungenutzt.}} Sie tragen
-        keine Zielvariable; ein halbueberwachter Ansatz waere moeglich, aber
-        nur mit zusaetzlicher Annahme.
+  \item \textbf{{Die 450 ungelabelten Zeilen bleiben ungenutzt -- bewusst.}}
+        Sie tragen keine Zielvariable und keine neuen Merkmalsmuster; ein
+        halbueberwachter Ansatz waere moeglich, aber nur mit zusaetzlicher
+        Annahme. Die Analyse beschraenkt sich daher auf die 700 gelabelten
+        Zeilen.
   \item \textbf{{Das Kostenmodell.}} Das Verhaeltnis 50:1 ist die vom
         Auftraggeber genannte Relation, keine Messung aus den Daten. Die
         Szenarien 1:1 bis 10:1 zeigen, wie empfindlich das Optimum auf diese

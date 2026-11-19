@@ -31,6 +31,10 @@ Für überwachtes Lernen sind nur die **700 gelabelten Zeilen** nutzbar. Die
 Merkmalskombinationen — sie sind ein Artefakt der Dateizusammenstellung.
 `src/common.py` entfernt die Verdreifachung beim Laden (`dedupe=True`).
 
+**Entscheidung:** Die Analyse beschränkt sich bewusst auf die 700 gelabelten
+Zeilen. Die 450 ungelabelten werden nicht verwendet — sie bringen weder eine
+Zielvariable noch neue Merkmalsmuster mit.
+
 ## Lizenz
 
 Der Datensatz stammt aus dem oben genannten Repository. Die Rechte liegen beim
